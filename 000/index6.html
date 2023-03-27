@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">КНОПКА</button>
+    <button id="btn2">КНОПКА</button>
+    <script>
+        var btn = document.getElementById('btn');
+        btn.counter = 0;
+        btn.onclick= function(){
+            this.counter++;
+            console.log('Нетрогай меня!' + this.counter);
+            // changeBG(this);
+       if(this.counter % 2){
+       changeBG2(this,"red",
+       "0 0 10px 0 red");
+      }else{
+        changeBG2(this,"blue",
+        "0 0 10px 0 blue");
+      }     
+        }
+        btn.style.cssText = 'border: none;\
+                            display: block;\
+                            font-size: 20px;\
+                            background: linear-gradient(to right, #8a2387, #e94057, #f27121);\
+                            color: #fff;\
+                            box-shadow: 0 0 10px 0 #8a2387;\
+                            widht: 200px;\
+                            height: 60px;\
+                            cursor: pointer;\
+                            outline: none;\
+                            margin: 100px auto;\
+                            '
+   
+    // function changeBG(tag){
+    //     if(tag.counter % 2){
+    //             tag.style.background = 'linear-gradient(to left, #4776e6, #8e54e9)';
+    //             tag.style.boxShadow = "0 0 10px 0 #8a2387";
+    //         }else {
+    //             tag.style.background = 'linear-gradient(to right, #8a2387, #e94057, #f27121)';
+    //             tag.style.boxShadow = "0 0 10px 0 #8a2387";
+    //         }
+    // }
+
+    function changeBG2(tag,background,boxShadow){
+        tag.style.background = background;
+        tag.style.boxShadow = boxShadow;
+    }
+    var btn2 = document.getElementById('btn2');
+    btn2.style.cssText = 'border: none;\
+                            display: block;\
+                            font-size: 20px;\
+                            background: linear-gradient(to right, #8a2387, #e94057, #f27121);\
+                            color: #fff;\
+                            box-shadow: 0 0 10px 0 #8a2387;\
+                            widht: 200px;\
+                            height: 60px;\
+                            cursor: pointer;\
+                            outline: none;\
+                            margin: 100px auto;\
+                            '
+    btn2.counter = 0
+    btn2.onmouseover = function(){
+        if(this.counter % 2){
+            changeBG2(this, "yellow",
+            "0 0 10px 0 yellow");
+        }else{
+            changeBG2(this, "green",
+            "0 0 10px 0 green");
+        }
+        this.counter ++;
+        console.log('Навели на мышку x'+this.counter );
+    }
+    // btn2.oncontextmenu = function(){
+    //     console.log('Тыкнули правой ктопкой мыши!');
+    // }
+    // btn2.onmouseup = function(){
+    //     console.log('Я НОВЫЙ ОБРОБОТЧИК СОБЫТИЙ, заменивший старый! Спасибо так лучше!');
+    // }
+    // btn2.onmousedown = function(){
+    //     console.log('Я НОВЫЙ ОБРОБОТЧИК СОБЫТИЙ, заменивший старый! И да ты нажал на кнопку!');
+    // }
+    // btn2.addEventListener('click' , function(){
+    //     console.log('Я тут события слушаю, Стой ты кликнул по кнопке?!');
+    // });
+    // btn2.addEventListener('click' , function(){
+    //     console.log('Я его страхую, ато ему одному страшно!');
+    // });
+
+    function firstHundler(){
+        console.log('Я тут события слушаю, С той ты кликнул по кнопке?');
+    }
+    function secondHundler(){
+        console.log('Я его страхую , ато ему одному страшно!');
+    }
+    btn2.addEventListener('click', firstHundler);
+    btn2.addEventListener('click' , secondHundler);
+    btn2.removeEventListener('click', firstHundler);
+    </script>
+</body>
+</html>

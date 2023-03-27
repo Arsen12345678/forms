@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">Красный</p>
+    <p id="text">Жолтый</p>
+    <p id="text"></p>
+    <p id="text"></p>
+    <p id="text"></p>
+    <p id="text"></p>
+    <p id="text"></p>
+    <p id="text"></p>
+    <p id="text"></p>
+    <p id="text"></p>
+    <script>
+    for(let i = 0; i < p.length; i++ ){
+    p[i].style.backgroundColor = '#' +(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+    p[i].style.display = 'inline-block';
+ };
+    </script>
+</body>
+</html>

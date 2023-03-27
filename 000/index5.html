@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 32px;
+            font-family: 'M PLUS Runder 1c', sans-serif;
+            line-height: 1.5;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <img src="/pp.jpg" data-src="/img/pp.jpg" alt="" id="image1">
+<div id="box1">
+    <p id="text1">Я - первый</p>
+    <p id="text2">Я - второй</p>
+    <p id="text3">Я - третий</p>
+    <p id="text4">Я - четвёртый</p>
+</div>   
+    <script>
+        // var removing = document.getElementById('text1');
+        // var removed = document.body.removeChild(removing);
+        // console.log(removed) ;
+        // var p = document.getElementsByTagName('p');
+        // while(p.length){
+        //     document.body.removeChild(p[0]);
+        // }
+
+    //     var cloned = document.getElementById('box1').cloneNode(false);
+    //     cloned.id = 'box2';
+    //     document.body.insertBefore(cloned, document.getElementById('box1'));
+    // var p = document.createElement('p'),
+    // beforerP = document.getElementById('text1');
+    // p.append('Я добавленный текст с помощью метода append!');
+    // p.id = 'before';
+    // p.style.color = 'red';
+    // // beforerP.before(p);
+    // // beforerP.after(p);
+    // var box1 = document.getElementById('box1');
+    // // box1.prepend(p);
+    // beforerP.replaceWith(p);
+
+    // var pCollection=[],
+    // box1 = document.getElementById('box1');
+    // for(let i = 0; i < 5; i++){
+    //     pCollection.push(document.createElement('p'));
+    //     pCollection[i].textContent = 'Я новый параграф под номером ' +i;
+    //     pCollection[i].id = 'p'+i;
+    // }
+    // console.log(pCollection);
+    // box1.prepend(...pCollection);
+
+    // var box1 = document.getElementById('box1');
+    // box1.innerHTML += 'Я стёр все параграфы (( Мне стыдно ';
+
+    // var text1 = document.getElementById('text1');
+    // text1.textContent = 'Я новый текст';
+    // text1.style.cssText = 'color : dodgerblue;\
+    //                        font-size: 50px;\
+    //                        text-align: center;\
+    //                        '
+
+    // var text1 = document.getElementById('text1');
+    // getPStyle = getComputedStyle(text1);
+    // console.log(getPStyle.color);
+    // if(getPStyle.color == 'rgb(255, 0, 0)'){
+    // text1.style.color = 'blue';
+    // }
+
+    // var link = document.createElement('a');
+    // link.textContent = 'Ссылка на википедию';
+    // link.setAttribute('href' , 'https://wikipedia.org');
+    // link.style.cssText = 'font-size :24px; \
+    //                        color: orange; \
+    //                        '
+    // document.body.prepend(link);
+
+    document.addEventListener('DOMContentLoaded', function(event){
+        console.log('Страница загружена');
+        var img = document.getElementById('image1');
+        if(img.hasAttribute('datd-src')){
+            var data = img.getAttribute('data-src');
+            console.log('Старый путь у картинки: ' + img.getAttribute('src'));
+            img.setAttribute('src', 'data');
+            console.log('Новый путь у картинки: ' + img.getAttribute('src'));
+            img.removeAttribute('data-src');
+        }
+    })
+    </script>
+</body>
+</html>

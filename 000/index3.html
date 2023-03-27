@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function sayHi(name){
+        //     console.log('Привет '+name);
+        // };
+        // sayHi('Nurkyz');
+        // sayHi('Arsen');
+
+        // function sun(a,b){
+        //     return a + b ;
+        // };
+        // c =sun(10,9);
+        // d =sun(8,11);
+        // f = sun(123,567);
+        // console.log(c ,d ,f);
+
+        // function sun(a, b, c){
+        //     return a + b + c ;
+        // };
+        // d =sun(12, 13, 14);
+        // f =sun(12, 34, 56 );
+        // g =sun(837, 4856, 75645);
+        // console.log(d, f, g);
+        // console.log(sun(d, f, g));
+
+        // function sun(a, b, c){
+        //     console.log('Переданные аргументы: ' , arguments[0], arguments[1], arguments[2]);
+        //     return a + b + c ;
+        // };
+        // d = sun(9, 90, 0);
+
+        // function coolSun( ){
+        //     var sun = 0;
+        //     [].forEach.call(arguments,function(i){
+        //         sun += i;
+        //     });
+        //     // for(let i = 0; i < arguments.length; ++i){
+        //     //     sun+=arguments[i];
+        //     // }
+        //     return sun;
+        // }
+        // console.log(coolSun());
+        // console.log(coolSun(1));
+        // console.log(coolSun(2));
+        // console.log(coolSun(3,7));
+        // console.log(coolSun(3,4,5));
+        // console.log(coolSun(8,7,6,4,5));
+
+        // var glabalVariable = 'Я глобальная переменная';
+        // function doNothing(){
+        //     var glabalVariable = 'Я локальная переменная';
+        //     console.log(glabalVariable);
+        // };
+        // console.log(glabalVariable);
+        // doNothing();
+
+        //     var greeTings = function(name){
+        // console.log('Привет ' +name);
+        //     };
+        //     var Hi = greeTings;
+        //     Hi('Ivan');
+        // greeTings('Maxim');
+        // greeTings('Ivan');
+
+        var car = {
+            color: 'red',
+        };
+        car.brendn = 'BMW';
+        car.speed = 100;
+        car.isDriving = false;
+        car.drive = function () {
+            this.isDriving = true;
+        }
+        car.stop = function () {
+            this.isDriving = false;
+        }
+
+        console.log(car);
+        // console.log(car.color);
+        // console.log(car.brendn);
+        // delete car.brendn;
+        // console.log(car);
+    </script>
+</body>
+
+</html>

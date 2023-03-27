@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="/style1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="form-container">
+        <h3 class="form-heading">Формочка</h3>
+        <form action="" id="form">
+            <div class="field">
+                <label for="name">Имя</label>
+                <input type="text" id="name">
+            </div>
+            <div class="field">
+                <label for="email">E-mail</label>
+                <input type="email" id="email">
+            </div>
+            <input type="submit" id="submit">
+        </form>
+    </div>
+    <script>
+        var inputs = [].slice.call(document.querySelectorAll('input'));
+        inputs.forEach(function (input) {
+            if (input.getAttribute('type') !== 'submit') {
+                console.log(input);
+                if(input.value!= ''){
+                    var label = document.querySelector('label[for="'+input.id+'"]');
+                    label.classList.add('focused');
+                }
+                input.addEventListener('focusin', focusinInputHundler, false);
+                input.addEventListener('focusout', focusoutInputHundler, false);
+            }
+        });
+
+        function focusinInputHundler(){
+            var label = document.querySelector('label[for="' + this.id + '"]');
+            label.classList.add('focused');
+            
+            // console.log(label);
+            // console.log(this.id + 'focus in');
+            
+        }
+        
+        function focusoutInputHundler(){
+            var label = document.querySelector('label[for="' + this.id + '"]');
+            if(this.value == ''   ){
+                label.classList.remove('focused');
+            }
+            // console.log(this.id + 'focus out');
+        }
+    </script>
+</body>
+
+</html>

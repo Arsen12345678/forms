@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 
+        // var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+        // sun = 0;
+        // numbers.forEach(function(iten){
+        //     sun += iten;
+        // });
+        // console.log('Сумма последовательнольности: ' +sun);
+        // var usernumber = [],
+        // sun = 0;
+        // for(let i = 10;
+        // i > 0; --i){
+        //     usernumber.push(+prompt('Введите число (Осталось '+i+')'));
+        // }
+        // usernumber.forEach(function(iten){
+        //     if(iten %2 ==0){
+        //         console.log(iten);
+        //         sun+= iten;
+        //     }
+          
+        // });
+        // console.log('Сумма последовательности чётных чисел: ' +sun);
+      // var names = [];
+      // for(let i = 5 ; i > 0 ; --i){
+      //   names.push(prompt('Введите имя своего друга (Осталось '+i+')'));
+      // }
+      // names.forEach(function(iten){
+      //   console.log('Привет, '+iten+ '. Рад тебя видеть');
+      // });
+      // var numbers = [1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,-1 -2 -3 ,-4 ,-5 ,-6 ,-7 ,-8, -9];
+      // positivenumbers = numbers.filter(function(number){
+      //   return number > 0;
+      // });
+      // console.log('Первоночальный массив: '+numbers);
+      // console.log('Отфильтрованный массив: '+positivenumbers);
+    //  var numbers = [1 ,2 ,3 ,4 ,5 ,-6 ,-7 ,-8 ,-9 ,-10];
+    //  x10numbers = numbers.map(function(number){
+    //   return number * 10;
+    //  });
+    //  console.log('Первоночальный массив: '+numbers);
+    //  console.log('Умноженный на 10: '+x10numbers);
+    
+    // var numbers = [1 ,2 ,3 ,4 ,5 ,-6 ,-7 ,-8 ,-9 ,-10];
+    // sunnumbers = numbers.reduce(function(sun, number){
+    //   return sun + number;
+    // },0);
+    // console.log('Первоночальный массив: '+numbers);
+    // console.log('Сумма массива: ' +sunnumbers);
+
+    // var numbers = [1 ,2 ,3 ,4 ,5 ,-6 ,-7 ,-8 ,-9 ,-10];
+    // hasPositive =  numbers.some(function(number){
+    //   return number > 0;
+    // });
+    // numbersIsPositive = numbers.every(function(number){
+    //   return numbers > 0;
+    // });
+    // console.log('Первоначальный массив: '+numbers);
+    // console.log('Есть ли положительные числа: '+hasPositive);
+    // console.log('Все ли элементы массива положителные: '+numbersIsPositive);
+
+  //   var names =[ 'Саша','Миша', 'Женя', 'Глеб' ],
+  //   qwe = names.map(function(name){
+  //     return name.length;
+  //   });
+  //  names.forEach(function(name, index){
+  //   console.log(name + ' ' + qwe[index]);
+  //  });
+
+  var numbers = [1 ,2 ,3 ,4 ,5 ,-6 ,-7 ,-8 ,-9 ,-10];
+  qwe = numbers.reduce(function(mult, number){
+    return mult * number;
+  });
+  console.log('Массив чисел: '+numbers);
+  console.log('Произведение чисел  равно: '+qwe);
+    </script>
+</body>
+</html>
